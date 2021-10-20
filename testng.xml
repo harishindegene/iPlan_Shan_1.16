@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests">
+   <test name="Firefox">
+ <parameter name="browser" value="Firefox"/>
+    <classes>
+     <class name="dataProvider.ExcelDataProvider"/>
+    </classes>
+  </test>
+   <test name="Chrome">
+ <parameter name="browser" value="Chrome"/>
+    <classes>
+     <class name="dataProvider.ExcelDataProvider"/>
+    </classes>
+  </test>
+  
+   <test name="ChromeParallel">
+ <parameter name="browser" value="ChromeParallel"/>
+    <classes>
+     <class name="dataProvider.ExcelDataProvider"/>
+    </classes>
+  </test>
+   <test name="IE">
+ <parameter name="browser" value="IE"/>
+    <classes>
+     <class name="dataProvider.ExcelDataProvider"/>
+    </classes>
+  </test>
+  
+   <test name="Edge">
+ <parameter name="browser" value="Edge"/>
+    <classes>
+     <class name="dataProvider.ExcelDataProvider"/>
+    </classes>
+  </test>   
+</suite> <!-- Suite -->

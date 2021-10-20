@@ -1,0 +1,557 @@
+<html lang="en" class="wf-roboto-n4-active wf-roboto-n5-active wf-active"><head>
+      <meta charset="utf-8">
+      <title>iWAgent Execution Output</title>
+      <meta name="description" content="Bootstrap.">
+      <style>.inv {display: none;}</style>
+      <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script><script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+      <link rel="stylesheet" href="http://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css">
+      <script type="text/javascript" src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script><script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+      <style>
+table.blueTable {
+  border: 1px solid #1C6EA4;
+  background-color: #EEEEEE;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+table.blueTable td, table.blueTable th {
+  border: 1px solid #AAAAAA;
+  padding: 3px 2px;
+}
+table.blueTable tbody td {
+  font-size: 13px;
+  text-align:center;
+}
+table.blueTable tr:nth-child(even) {
+  background: #D0E4F5;
+}
+table.blueTable thead {
+  background: #1C6EA4;
+  background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  border-bottom: 2px solid #444444;
+}
+table.blueTable thead th {
+  font-size: 15px;
+  font-weight: bold;
+  color: #FFFFFF;
+  border-left: 2px solid #D0E4F5;
+}
+table.blueTable thead th:first-child {
+  border-left: none;
+}
+
+table.blueTable tfoot {
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFFFFF;
+  background: #D0E4F5;
+  background: -moz-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+  background: -webkit-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+  background: linear-gradient(to bottom, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+  border-top: 2px solid #444444;
+}
+table.blueTable tfoot td {
+  font-size: 14px;
+}
+table.blueTable tfoot .links {
+  text-align: right;
+}
+table.blueTable tfoot .links a{
+  display: inline-block;
+  background: #1C6EA4;
+  color: #FFFFFF;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+</style>
+
+
+
+
+<style>.open .menu-icon-toggle::after,.open .menu-icon-toggle::before{-webkit-transition:top .3s,bottom .3s,-webkit-transform .3s .3s;transition:top .3s,bottom .3s,-webkit-transform .3s .3s;transition:top .3s,bottom .3s,transform .3s .3s;transition:top .3s,bottom .3s,transform .3s .3s,-webkit-transform .3s .3s}.menu-background{visibility:hidden;width:300%;height:780%;position:absolute;left:-130%;background-color:#fff;-webkit-transition:background-position .1s,visibility .1s 1s,-webkit-transform .1s .1s;transition:background-position .1s,visibility .1s 1s,-webkit-transform .1s .1s;transition:background-position .1s,transform .1s .1s,visibility .1s 1s;transition:background-position .1s,transform .1s .1s,visibility .1s 1s,-webkit-transform .1s .1s}.open .menu-background{visibility:visible;-webkit-transition:background-position .1s,-webkit-transform .1s .1s;transition:background-position .1s,-webkit-transform .1s .1s;transition:background-position .1s,transform .1s .1s;transition:background-position .1s,transform .1s .1s,-webkit-transform .1s .1s}.menu-background.top{-webkit-transform:rotate(-45deg) translateY(-150%);transform:rotate(-45deg) translateY(-150%);background:-webkit-gradient(linear,left bottom,left top,color-stop(50%,#6191d1),color-stop(50%,#fff));background:linear-gradient(to top,#6191d1 50%,#fff 50%);background-size:100% 200%;background-position:-100% 100%}.open .menu-background.top{-webkit-transform:rotate(-45deg) translateY(-49%);transform:rotate(-45deg) translateY(-49%);background-position:0 0}.menu-background.middle{-webkit-transform:rotate(-45deg) translateY(50%) scaleY(0);transform:rotate(-45deg) translateY(50%) scaleY(0);background:#fff}.open .menu-background.middle{-webkit-transform:rotate(-45deg) translateY(50%) scaleY(1);transform:rotate(-45deg) translateY(50%) scaleY(1)}.menu-background.bottom{-webkit-transform:rotate(-45deg) translateY(250%);transform:rotate(-45deg) translateY(250%);background:-webkit-gradient(linear,left top,left bottom,color-stop(50%,#fff),color-stop(50%,#6191d1));background:linear-gradient(to bottom,#fff 50%,#6191d1 50%);background-size:100% 200%;background-position:0 -100%}.open .menu-background.bottom{-webkit-transform:rotate(-45deg) translateY(149%);transform:rotate(-45deg) translateY(149%);background-position:0 0}.menu{position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);visibility:hidden;list-style-type:none;margin:0;padding:0;z-index:99999}.open .menu{visibility:visible}.menu li{opacity:0;margin-bottom:5px;-webkit-transform:translateX(20px);transform:translateX(20px);-webkit-transition:all .1s;transition:all .1s}.menu li:nth-child(18){-webkit-transition-delay:.1s;transition-delay:.1s}.menu li:nth-child(18) span{-webkit-transition-delay:.1s;transition-delay:.1s}.menu li:nth-child(17){-webkit-transition-delay:.1s;transition-delay:.1s}.menu li:nth-child(17) span{-webkit-transition-delay:.1s;transition-delay:.1s}.menu li:nth-child(16){-webkit-transition-delay:.1s;transition-delay:.1s}.menu li:nth-child(16) span{-webkit-transition-delay:.1s;transition-delay:.1s}.menu li:nth-child(15){-webkit-transition-delay:.1s;transition-delay:.1s}.menu li:nth-child(15) span{-webkit-transition-delay:.1s;transition-delay:.1s}.menu li:nth-child(14){-webkit-transition-delay:.1s;transition-delay:.1s}.menu li:nth-child(14) span{-webkit-transition-delay:.1s;transition-delay:.1s}.menu li:nth-child(13){-webkit-transition-delay:.1s;transition-delay:.1s}.menu li:nth-child(13) span{-webkit-transition-delay:.1s;transition-delay:.1s}.menu li:nth-child(12){-webkit-transition-delay:.1s;transition-delay:.1s}.menu li:nth-child(12) span{-webkit-transition-delay:.1s;transition-delay:.1s}.menu li:nth-child(11){-webkit-transition-delay:.1s;transition-delay:.1s}.menu li:nth-child(11) span{-webkit-transition-delay:.1s;transition-delay:.1s}.menu li:nth-child(10){-webkit-transition-delay:.1s;transition-delay:.1s}.menu li:nth-child(10) span{-webkit-transition-delay:.1s;transition-delay:.1s}.menu li:nth-child(9){-webkit-transition-delay:.1s;transition-delay:.1s}.menu li:nth-child(9) span{-webkit-transition-delay:.1s;transition-delay:.1s}.menu li:nth-child(8){-webkit-transition-delay:.1s;transition-delay:.1s}.menu li:nth-child(8) span{-webkit-transition-delay:.1s;transition-delay:.1s}.menu li:nth-child(7){-webkit-transition-delay:.1s;transition-delay:.1s}.menu li:nth-child(7) span{-webkit-transition-delay:.1s;transition-delay:.1s}.menu li:nth-child(6){-webkit-transition-delay:.1s;transition-delay:.1s}.menu li:nth-child(6) span{-webkit-transition-delay:.1s;transition-delay:.1s}.menu li:nth-child(5){-webkit-transition-delay:.1s;transition-delay:.1s}.menu li:nth-child(5) span{-webkit-transition-delay:.1s;transition-delay:.1s}.menu li:nth-child(4){-webkit-transition-delay:.1s;transition-delay:.1s}.menu li:nth-child(4) span{-webkit-transition-delay:.1s;transition-delay:.1s}.menu li:nth-child(3){-webkit-transition-delay:.1s;transition-delay:.1s}.menu li:nth-child(3) span{-webkit-transition-delay:.1s;transition-delay:.1s}.menu li:nth-child(2){-webkit-transition-delay:.1s;transition-delay:.1s}.menu li:nth-child(2) span{-webkit-transition-delay:.1s;transition-delay:.1s}.menu li:nth-child(1){-webkit-transition-delay:.1s;transition-delay:.1s}.menu li:nth-child(1) span{-webkit-transition-delay:.1s;transition-delay:.1s}.open .menu li{opacity:1;-webkit-transform:translateX(0);transform:translateX(0);-webkit-backface-visibility:hidden;backface-visibility:hidden}.open .menu li:nth-child(1){-webkit-transition-delay:.5s;transition-delay:.5s}.open .menu li:nth-child(1) span{-webkit-transition-delay:.5s;transition-delay:.5s}.open .menu li:nth-child(2){-webkit-transition-delay:.5s;transition-delay:.5s}.open .menu li:nth-child(2) span{-webkit-transition-delay:.5s;transition-delay:.5s}.open .menu li:nth-child(3){-webkit-transition-delay:.5s;transition-delay:.5s}.open .menu li:nth-child(3) span{-webkit-transition-delay:.5s;transition-delay:.5s}.open .menu li:nth-child(4){-webkit-transition-delay:.5s;transition-delay:.5s}.open .menu li:nth-child(4) span{-webkit-transition-delay:.5s;transition-delay:.5s}.open .menu li:nth-child(5){-webkit-transition-delay:.5s;transition-delay:.5s}.open .menu li:nth-child(5) span{-webkit-transition-delay:.5s;transition-delay:.5s}.open .menu li:nth-child(6){-webkit-transition-delay:.5s;transition-delay:.5s}.open .menu li:nth-child(6) span{-webkit-transition-delay:.5s;transition-delay:.5s}.open .menu li:nth-child(7){-webkit-transition-delay:.5s;transition-delay:.5s}.open .menu li:nth-child(7) span{-webkit-transition-delay:.5s;transition-delay:.5s}.open .menu li:nth-child(8){-webkit-transition-delay:.5s;transition-delay:.5s}.open .menu li:nth-child(8) span{-webkit-transition-delay:.5s;transition-delay:.5s}.open .menu li:nth-child(9){-webkit-transition-delay:.5s;transition-delay:.5s}.open .menu li:nth-child(9) span{-webkit-transition-delay:.5s;transition-delay:.5s}.open .menu li:nth-child(10){-webkit-transition-delay:.5s;transition-delay:.5s}.open .menu li:nth-child(10) span{-webkit-transition-delay:.5s;transition-delay:.5s}.open .menu li:nth-child(11){-webkit-transition-delay:.5s;transition-delay:.5s}.open .menu li:nth-child(11) span{-webkit-transition-delay:.5s;transition-delay:.5s}.open .menu li:nth-child(12){-webkit-transition-delay:.5s;transition-delay:.5s}.open .menu li:nth-child(12) span{-webkit-transition-delay:.5s;transition-delay:.5s}.open .menu li:nth-child(13){-webkit-transition-delay:.5s;transition-delay:.5s}.open .menu li:nth-child(13) span{-webkit-transition-delay:.5s;transition-delay:.5s}.open .menu li:nth-child(14){-webkit-transition-delay:.5s;transition-delay:.5s}.open .menu li:nth-child(14) span{-webkit-transition-delay:.5s;transition-delay:.5s}.open .menu li:nth-child(15){-webkit-transition-delay:.5s;transition-delay:.5s}.open .menu li:nth-child(15) span{-webkit-transition-delay:.5s;transition-delay:.5s}.open .menu li:nth-child(16){-webkit-transition-delay:.5s;transition-delay:.5s}.open .menu li:nth-child(16) span{-webkit-transition-delay:.5s;transition-delay:.5s}.open .menu li:nth-child(17){-webkit-transition-delay:.5s;transition-delay:.5s}.open .menu li:nth-child(17) span{-webkit-transition-delay:.5s;transition-delay:.5s}.open .menu li:nth-child(18){-webkit-transition-delay:.5s;transition-delay:.5s}.open .menu li:nth-child(18) span{-webkit-transition-delay:.5s;transition-delay:.5s}.menu a{position:relative;font-size:19px;text-decoration:none}.menu a::before{content:'';display:block;height:2px;width:0;position:absolute;left:-30px;top:50%;background-color:#6191d1;-webkit-transform:translateY(-50%);transform:translateY(-50%);-webkit-transition:width .3s;transition:width .3s}.menu a:hover::before{width:15px}.content{position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);width:100%;text-align:center;color:#fff;-webkit-transition:all .3s 1s;transition:all .3s 1s}.open .content{opacity:0;-webkit-transition:all .3s;transition:all .3s}.transition-normal{-webkit-transition:.5s all;transition:.5s all}</style>
+      <style>h1{font-size: 30px; color: #5ef22c; font-weight: bolder; text-align: center; margin-bottom: 15px; text-decoration: underline;}table{width:100%;table-layout: fixed;}.tbl-header{ background-color: #f7f7f7; } th{padding: 5px 15px; text-align: center; font-weight: bold;color:#1d76bc;text-transform:uppercase;font-size: 12px; color: #007bff; text-transform: uppercase;}.doubleLines{border-top: 5px solid #8ac441;border-bottom: 1px solid #8ac441;height:.5em;width: 100%;margin-bottom: .7em;margin-top: .4em;}img{vertical-align: middle;padding-top: 10px;padding-left: 10px;}td{padding: 4px;text-align: left;vertical-align: middle;font-weight: 300;font-size: 12px;color: black;border-bottom: solid 1px #1d76bc;border-right: solid 1px #1d76bc;border-left: solid 1px #1d76bc; 1px cornflowerblue;border-right: solid 1px cornflowerblue;border-left: solid 1px cornflowerblue;}h2{font-size: 20px; color:black}h3{font-size: 1.9em;color: dimgrey;font-family:Raleway,sans-serif;font-weight: 800;text-align: center;}label{margin:25px;}@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);body{background-color:#0059a0;}.logo{background-image: url('https://www.indegene.com/img2018/logo-white.svg');}section{ margin: 0px;background: white}.made-with-love {padding: 1px 9px 1px; clear: left; text-align: center; font-size: 10px; font-family: arial; color: #fff;background-color:#0059a0}.made-with-love i {font-style: normal; color: #F50057; font-size: 14px; position: relative; top: 2px;}.made-with-love a {color: #fff; text-decoration: none;}.made-with-love a:hover {text-decoration: underline;}::-webkit-scrollbar {width: 6px;} ::-webkit-scrollbar-track {-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); } ::-webkit-scrollbar-thumb {-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); }</style>
+      <script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/loader.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/loader.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/loader.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/loader.js"></script>
+      <link id="load-css-0" rel="stylesheet" type="text/css" href="https://www.gstatic.com/charts/49/css/core/tooltip.css">
+      <link id="load-css-1" rel="stylesheet" type="text/css" href="https://www.gstatic.com/charts/49/css/util/util.css">
+      <script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/js/jsapi_compiled_default_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/js/jsapi_compiled_graphics_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/js/jsapi_compiled_ui_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/js/jsapi_compiled_corechart_module.js"></script>
+      <link id="load-css-0" rel="stylesheet" type="text/css" href="https://www.gstatic.com/charts/49/css/core/tooltip.css">
+      <link id="load-css-1" rel="stylesheet" type="text/css" href="https://www.gstatic.com/charts/49/css/util/util.css">
+      <script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/js/jsapi_compiled_default_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/js/jsapi_compiled_graphics_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/js/jsapi_compiled_ui_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/js/jsapi_compiled_corechart_module.js"></script>
+      <link id="load-css-0" rel="stylesheet" type="text/css" href="https://www.gstatic.com/charts/49/css/core/tooltip.css">
+      <link id="load-css-1" rel="stylesheet" type="text/css" href="https://www.gstatic.com/charts/49/css/util/util.css">
+      <script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/js/jsapi_compiled_default_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/js/jsapi_compiled_graphics_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/js/jsapi_compiled_ui_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/js/jsapi_compiled_corechart_module.js"></script>
+      <link id="load-css-0" rel="stylesheet" type="text/css" href="https://www.gstatic.com/charts/49/css/core/tooltip.css">
+      <link id="load-css-1" rel="stylesheet" type="text/css" href="https://www.gstatic.com/charts/49/css/util/util.css">
+      <script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/js/jsapi_compiled_default_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/js/jsapi_compiled_graphics_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/js/jsapi_compiled_ui_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/js/jsapi_compiled_fw_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/third_party/dygraphs/dygraph-tickers-combined.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/third_party/webfontloader/webfont.js"></script>
+      <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto%7CRoboto:medium">
+      <script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/js/jsapi_compiled_bar_module.js"></script>
+   <script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/loader.js"></script><link id="load-css-0" rel="stylesheet" type="text/css" href="https://www.gstatic.com/charts/49/css/core/tooltip.css"><link id="load-css-1" rel="stylesheet" type="text/css" href="https://www.gstatic.com/charts/49/css/util/util.css"><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/js/jsapi_compiled_default_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/js/jsapi_compiled_graphics_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/js/jsapi_compiled_ui_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/js/jsapi_compiled_corechart_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/loader.js"></script><link id="load-css-0" rel="stylesheet" type="text/css" href="https://www.gstatic.com/charts/49/css/core/tooltip.css"><link id="load-css-1" rel="stylesheet" type="text/css" href="https://www.gstatic.com/charts/49/css/util/util.css"><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/js/jsapi_compiled_default_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/js/jsapi_compiled_graphics_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/js/jsapi_compiled_ui_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/js/jsapi_compiled_corechart_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/loader.js"></script><link id="load-css-0" rel="stylesheet" type="text/css" href="https://www.gstatic.com/charts/49/css/core/tooltip.css"><link id="load-css-1" rel="stylesheet" type="text/css" href="https://www.gstatic.com/charts/49/css/util/util.css"><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/js/jsapi_compiled_default_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/js/jsapi_compiled_graphics_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/js/jsapi_compiled_ui_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/js/jsapi_compiled_corechart_module.js"></script></head>
+   <body style="">
+      <div><img src="https://myindegene.indegene.com/employeecompetencyinternal/images/indegeneLogo.png"></div>
+      <section>
+         <div>
+            <h3>iWAgent Actions - Master List</h3>
+            <div class="doubleLines"></div>
+
+<table class="blueTable">
+<thead>
+<tr>
+<th>S No</th>
+<th>Action</th>
+<th>Action Description</th>
+<th>Request From</th>
+</tr>
+</thead>
+<tfoot>
+<tr>
+<td colspan="4">
+<div class="links"><a href="#">«</a> <a class="active" href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">»</a></div>
+</td>
+</tr>
+</tfoot>
+<tbody>
+<tr>
+<td>1</td>
+<td>Browser</td>
+<td>To start a new browser session</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>2</td>
+<td>navigate</td>
+<td>Navigate to link in a Webpage</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>3</td>
+<td>type</td>
+<td>Type any text in input field</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>4</td>
+<td>screenshot</td>
+<td>Capture screenshot of webpage</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>5</td>
+<td>click</td>
+<td>Click on any Element</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>6</td>
+<td>closeBrowser</td>
+<td>To close a browser session</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>7</td>
+<td>waitshort</td>
+<td>Wait short time period for an element</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>8</td>
+<td>scroll</td>
+<td>To Scroll down the page</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>9</td>
+<td>mousehover</td>
+<td>Mouse hover on any element</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>10</td>
+<td>mouseclick</td>
+<td>To perform Mouse click on any Element</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>11</td>
+<td>switchtodefault</td>
+<td>To switch back to default frame</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>12</td>
+<td>switchtoactive</td>
+<td>To switch to the active frame</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>13</td>
+<td>verifyalllinks</td>
+<td>To verify all the links in the webpage with status code and message</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>14</td>
+<td>select</td>
+<td>To select any value from drop down</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>15</td>
+<td>scrollup</td>
+<td>To perform scroll up action</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>16</td>
+<td>closebrowsertab</td>
+<td>To close browser tab</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>17</td>
+<td>checkpagetitle</td>
+<td>To validate the page title</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>18</td>
+<td>waitmedium</td>
+<td>To wait for medium period of time (5 sec)</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>19</td>
+<td>reloadpage</td>
+<td>To refresh or reload the page</td>
+<td>Basic Action</td>
+</tr><tr>
+<td>20</td>
+<td>waitlong</td>
+<td>To wait for longer period of time (8 sec)</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>21</td>
+<td>verifyurl</td>
+<td>To verify the current URL of the webpage</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>22</td>
+<td>scrollup</td>
+<td>To scoll up the page</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>23</td>
+<td>switchtoiframe</td>
+<td>Switch to the iframe in the page</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>24</td>
+<td>switchtodefaultframe</td>
+<td>To switch back to default frame</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>25</td>
+<td>verifytextnotpresent</td>
+<td>To check if the text is not present in the page</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>26</td>
+<td>draganddrop</td>
+<td>To perform drag and drop option</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>27</td>
+<td>getcsscolor</td>
+<td>To obtain the color of the element</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>28</td>
+<td>JavascriptClick</td>
+<td>To perform Javascript click on an Element</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>29</td>
+<td>isElementPresent</td>
+<td>To validate if an element is present in the Webpage</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>30</td>
+<td>browserforward</td>
+<td>To perform navigate forward action</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>31</td>
+<td>browserbackward</td>
+<td>To perform navigate back action</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>32</td>
+<td>closetab</td>
+<td>Closed the current tab</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>33</td>
+<td>opentab</td>
+<td>To open in a new Tab</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>34</td>
+<td>explicitwait</td>
+<td>Explicit wait till an element is visible </td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>35</td>
+<td>customwait</td>
+<td>Forcing the script to wait based on custome time period</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>36</td>
+<td>verifytooltip</td>
+<td>To validate tooltip text on hover</td>
+<td>Amgen</td>
+</tr>
+<tr>
+<td>37</td>
+<td>downloadfile</td>
+<td>Download File from WebPage</td>
+<td>Amgen</td>
+</tr>
+<tr>
+<td>38</td>
+<td>verifyinputtext</td>
+<td>To verify in the text in input field</td>
+<td>VEM Automation</td>
+</tr><tr>
+<td>39</td>
+<td>verifyselecttext</td>
+<td>To verify the selected text in dropdown</td>
+<td>VEM Automation</td>
+</tr>
+<tr>
+<td>40</td>
+<td>uploadfile</td>
+<td>To upload any file in the webpage</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>41</td>
+<td>cleartext</td>
+<td>To clear the existing text in the input field</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>42</td>
+<td>typevalue</td>
+<td>To Enter value in input field</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>43</td>
+<td>verifyvalue</td>
+<td>To validate Integer value in input field</td>
+<td>VEM Automation</td>
+</tr>
+<tr>
+<td>44</td>
+<td>verifyYcordinate</td>
+<td>To validate ocordinate of an image</td>
+<td>Allergen</td>
+</tr>
+<tr>
+<td>45</td>
+<td>verifyXcordinate</td>
+<td>To validate cordinate of an image</td>
+<td>Allergen</td>
+</tr>
+<tr>
+<td>46</td>
+<td>verifybgcolor</td>
+<td>To validate the bg color of an element</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>47</td>
+<td>slideraction</td>
+<td>To perform slide drag</td>
+<td>Allergen</td>
+</tr>
+<tr>
+<td>48</td>
+<td>verifyimgsrc</td>
+<td>To validate the src of the image in the webpage</td>
+<td>Amgen</td>
+</tr>
+<tr>
+<td>49</td>
+<td>getloadtime</td>
+<td>To obtain the load time of the web page</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>50</td>
+<td>savedata</td>
+<td>To save the data extracted from Website</td>
+<td>VEM Automation</td>
+</tr>
+<tr>
+<td>51</td>
+<td>inputdynamicdata</td>
+<td>To input dynamic Test data to the filed appending timestamp</td>
+<td>VEM Automation</td>
+</tr>
+<tr>
+<td>52</td>
+<td>comparedata</td>
+<td>To compare the previously saved data</td>
+<td>VEM Automation</td>
+</tr>
+<tr>
+<td>53</td>
+<td>clearvalue</td>
+<td>To clear existing value in the Text box</td>
+<td>VEM Automation</td>
+</tr>
+<tr>
+<td>54</td>
+<td>keyboardTab</td>
+<td>To perform Keyboard Tab Action</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>55</td>
+<td>keyboardDownArrow</td>
+<td>To perform keyboard Arrow Down</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>56</td>
+<td>keyboardUpArrow</td>
+<td>To perform keyboard Arrow Up</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>57</td>
+<td>keyboardEnter</td>
+<td>To start a new browser session</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>58</td>
+<td>compareimage</td>
+<td>To start a new browser session</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>59</td>
+<td>captureimage</td>
+<td>To start a new browser session</td>
+<td>Basic Action</td>
+</tr>
+<tr>
+<td>60</td>
+<td>keyboardselectall</td>
+<td>Action item to select all files</td>
+<td>VEM Automation</td>
+</tr>
+<tr>
+<td>61</td>
+<td>videopause</td>
+<td>Action item to click on Pause button in Video</td>
+<td>Amgen & Allergen</td>
+</tr>
+<tr>
+<td>62</td>
+<td>videoplay</td>
+<td>Action item to click on Play button in Video</td>
+<td>Amgen & Allergen</td>
+</tr>
+<tr>
+<td>63</td>
+<td>verifyhiddenvalue</td>
+<td>VEM Team</td>
+<td>Action item to check the text inside hidden element</td>
+</tr>
+<tr>
+<td>64</td>
+<td>righclick</td>
+<td>Action item to perform Right click on an Element</td>
+<td>ICMS Automation - Preeth A</td>
+</tr>
+<tr>
+<td>65</td>
+<td>verifyPartialText</td>
+<td>Action item to validate Partial Text in an Element</td>
+<td>iPlan Automation Team</td>
+</tr>
+<tr>
+<td>66</td>
+<td>ischeckBoxEnabled</td>
+<td>Action item to validate if the checkbox is Enabled in the page</td>
+<td>iPlan Automation Team</td>
+</tr>
+<tr>
+<td>67</td>
+<td>islink</td>
+<td>Action item to validate if the element is Link or not</td>
+<td>iPlan Automation Team</td>
+</tr>
+<tr>
+<td>68</td>
+<td>validatepdftext</td>
+<td>Action item to validate text inside PDF</td>
+<td>EMD Chat bot Automation - Kiran K</td>
+</tr>
+<tr>
+
+
+
+</tbody>
+</table>
+            
+            
+         </div>
+         <div id="content_1" class="inv">
+            <h2>Chrome Execution Report</h2>
+            <div id="donutchart" style="width:30%;float:left"><div style="position: relative;"><div dir="ltr" style="position: relative; width: 550px; height: 400px;"><div aria-label="A chart." style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;"><svg width="550" height="400" aria-label="A chart." style="overflow: hidden;"><defs id="_ABSTRACT_RENDERER_ID_0"></defs><rect x="0" y="0" width="550" height="400" stroke="none" stroke-width="0" fill="#ffffff"></rect><g><text text-anchor="start" x="105" y="56.2" font-family="Arial" font-size="12" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">PASS Vs FAIL</text><rect x="105" y="46" width="340" height="12" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect></g><g><rect x="334" y="77" width="111" height="12" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g column-id="PASS"><rect x="334" y="77" width="111" height="12" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="351" y="87.2" font-family="Arial" font-size="12" stroke="none" stroke-width="0" fill="#222222">PASS</text></g><circle cx="340" cy="83" r="6" stroke="none" stroke-width="0" fill="#3366cc"></circle></g></g><g><path d="M210,96A105,105,0,0,1,210,306A105,105,0,0,1,210,96M210,159A42,42,0,0,0,210,243A42,42,0,0,0,210,159Z" stroke="#ffffff" stroke-width="1" fill="#3366cc"></path><text text-anchor="start" x="210" y="205.2" font-family="Arial" font-size="12" stroke="none" stroke-width="0" fill="#ffffff">100%</text></g><g></g></svg><div aria-label="A tabular representation of the data in the chart." style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;"><table><thead><tr><th>Status</th><th>Count</th></tr></thead><tbody><tr><td>PASS</td><td>1</td></tr><tr><td>FAIL</td><td>0</td></tr></tbody></table></div></div></div><div aria-hidden="true" style="display: none; position: absolute; top: 410px; left: 560px; white-space: nowrap; font-family: Arial; font-size: 12px;">PASS</div><div></div></div></div>
+            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script><script type="text/javascript">google.charts.load('current', {'packages':['corechart']});google.charts.setOnLoadCallback(drawChart);function drawChart() {var data = google.visualization.arrayToDataTable([ ['Status', 'Count'], ['PASS', 1], ['FAIL', 0] ]);var options = {'title':'PASS Vs FAIL',pieHole: 0.4, 'width':550, 'height':400};var chart = new google.visualization.PieChart(document.getElementById('donutchart'));chart.draw(data, options);}</script>
+         </div>
+         <div id="content_2" class="inv">
+            <h2>Firefox Execution Report</h2>
+            <div id="donutchart1" style="width:30%;float:left"><div style="position: relative;"><div dir="ltr" style="position: relative; width: 550px; height: 400px;"><div aria-label="A chart." style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;"><svg width="550" height="400" aria-label="A chart." style="overflow: hidden;"><defs id="_ABSTRACT_RENDERER_ID_1"></defs><rect x="0" y="0" width="550" height="400" stroke="none" stroke-width="0" fill="#ffffff"></rect><g><text text-anchor="start" x="105" y="56.2" font-family="Arial" font-size="12" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">PASS Vs FAIL</text><rect x="105" y="46" width="340" height="12" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect></g><g></g></svg><div aria-label="A tabular representation of the data in the chart." style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;"><table><thead><tr><th>FireFox Status</th><th>Count</th></tr></thead><tbody><tr><td>Firefox PASS</td><td></td></tr><tr><td>Firefox FAIL</td><td></td></tr></tbody></table></div></div></div><div aria-hidden="true" style="display: none; position: absolute; top: 410px; left: 560px; white-space: nowrap; font-family: Arial; font-size: 12px; font-weight: bold;">PASS Vs FAIL</div><div></div></div></div>
+            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script><script type="text/javascript">google.charts.load('current', {'packages':['corechart']});google.charts.setOnLoadCallback(drawChart);function drawChart() {var data = google.visualization.arrayToDataTable([ ['FireFox Status', 'Count'], ['Firefox PASS', null], ['Firefox FAIL', null] ]);var options = {'title':'PASS Vs FAIL',pieHole: 0.4, 'width':550, 'height':400};var chart = new google.visualization.PieChart(document.getElementById('donutchart1'));chart.draw(data, options);}</script>
+         </div>
+         <div id="content_3" class="inv">
+            <h2>Edge Chromium Execution Report</h2>
+            <div id="donutchart2" style="width:30%;float:left"><div style="position: relative;"><div dir="ltr" style="position: relative; width: 550px; height: 400px;"><div aria-label="A chart." style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;"><svg width="550" height="400" aria-label="A chart." style="overflow: hidden;"><defs id="_ABSTRACT_RENDERER_ID_2"></defs><rect x="0" y="0" width="550" height="400" stroke="none" stroke-width="0" fill="#ffffff"></rect><g><text text-anchor="start" x="105" y="56.2" font-family="Arial" font-size="12" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">PASS Vs FAIL</text><rect x="105" y="46" width="340" height="12" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect></g><g></g></svg><div aria-label="A tabular representation of the data in the chart." style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;"><table><thead><tr><th>Status</th><th>Count</th></tr></thead><tbody><tr><td>Edge PASS</td><td></td></tr><tr><td>Edge FAIL</td><td></td></tr></tbody></table></div></div></div><div aria-hidden="true" style="display: none; position: absolute; top: 410px; left: 560px; white-space: nowrap; font-family: Arial; font-size: 12px; font-weight: bold;">PASS Vs FAIL</div><div></div></div></div>
+            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script><script type="text/javascript">google.charts.load('current', {'packages':['corechart']});google.charts.setOnLoadCallback(drawChart);function drawChart() {var data = google.visualization.arrayToDataTable([ ['Status', 'Count'], ['Edge PASS', null], ['Edge FAIL', null] ]);var options = {'title':'PASS Vs FAIL',pieHole: 0.4, 'width':550, 'height':400};var chart = new google.visualization.PieChart(document.getElementById('donutchart2'));chart.draw(data, options);}</script>
+         </div>
+      </section>
+      <div class="made-with-love">
+         <footer>
+            <h2 style="color:white" ;="">iWAgent Automation Framework Indegene Pvt. Ltd</h2>
+         </footer>
+      </div>
+      <script>$(document).ready(function(){ $('#myTable').dataTable();});</script>
+      <div style="position: absolute; top: -1000px; left: -1000px; white-space: nowrap; display: none;">
+         <svg></svg>
+      </div>
+   
+</body></html>
