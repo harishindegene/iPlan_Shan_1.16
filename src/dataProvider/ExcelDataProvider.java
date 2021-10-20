@@ -67,9 +67,9 @@ public class ExcelDataProvider
         FileUtils.cleanDirectory(new File("./FirefoxTestImages"));
         FileUtils.cleanDirectory(new File("./IETestImages"));
         FileUtils.cleanDirectory(new File("./EdgeTestImages"));
-        FileUtils.cleanDirectory(new File("\\Archieve_iWAgentReports\\ChromeTestReports\\CustChrome"));
-        FileUtils.cleanDirectory(new File("\\Archieve_iWAgentReports\\FFTestReports\\CustFF"));
-        FileUtils.cleanDirectory(new File("\\Archieve_iWAgentReports\\EdgeTestReports\\CustEdge"));
+       // FileUtils.cleanDirectory(new File("\\Archieve_iWAgentReports\\ChromeTestReports\\CustChrome"));
+       // FileUtils.cleanDirectory(new File("\\Archieve_iWAgentReports\\FFTestReports\\CustFF"));
+       // FileUtils.cleanDirectory(new File("\\Archieve_iWAgentReports\\EdgeTestReports\\CustEdge"));
         System.out.println("Starting the Test Suite");
     }
     
