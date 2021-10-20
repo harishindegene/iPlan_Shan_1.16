@@ -51,7 +51,7 @@ import java.util.Calendar;
 import java.util.function.Function;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.sikuli.script.Screen;
+
 
 import java.util.concurrent.TimeUnit;
 import io.percy.selenium.Percy;
@@ -702,37 +702,7 @@ public class ChromeWebActions extends ChromeConfig
         }
     }
     
-    public static void sikulidragdrop(final WebDriver driver, final String testdata, final String expectedresult) {
-        try {
-        	
-        	Screen screen = new Screen();
-        	final File dir = new File("./ChromeTestImages");
-        	final File[] dir_contents = dir.listFiles();
-            if (dir.listFiles().length != 0) {
-                for (int i = 0; i < dir_contents.length; ++i) {
-                    if (dir_contents[i].getName().equalsIgnoreCase(String.valueOf(testdata) + ".png")) {
-                        ChromeWebActions.logger.log(LogStatus.FAIL, "Problem with the file name given. Duplicates Found");
-                    }
-                }
-            }
-           
-            final File dragfrom  = new File("./ChromeTestImages/" + testdata + ".png");
-            final File dropto  = new File("./ChromeTestImages/" + expectedresult + ".png");
-        	try {
-        	screen.dragDrop(dragfrom, dropto);
-        	}
-        	catch(Exception e)
-        	{
-        		System.out.println(e);
-        	}
-        	
-           
-        }
-        catch (Exception e) {
-            ChromeWebActions.logger.log(LogStatus.FAIL, "Unable to capture Page screenshot");
-           
-        }
-    }
+    
     
     public static String getpageloadtime(final WebDriver driver) {
         try {

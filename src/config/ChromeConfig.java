@@ -170,9 +170,7 @@ public class ChromeConfig extends ExcelDataProvider
                     ChromeWebActions.percyload(ChromeConfig.driver, testdata);
                 }
                 
-                if (actions.equalsIgnoreCase("sikulidragdrop")) {
-                    ChromeWebActions.sikulidragdrop(ChromeConfig.driver, testdata,expectedresult );
-                }
+               
                 
                 
                 
