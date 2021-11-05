@@ -67,10 +67,10 @@ public class ChromeConfig extends ExcelDataProvider
                 if (object_type.equalsIgnoreCase("browser")) {
                     if (testdata.equalsIgnoreCase("NA")) {
                         if (actions.equalsIgnoreCase("startBrowser")) {
-                            String URL = "http://192.168.2.55:5566/wd/hub";
+                            String URL = "http://192.168.8.175:4444/wd/hub";
 									DesiredCapabilities capability = DesiredCapabilities.chrome();
 									capability.setBrowserName("chrome");
-									capability.setVersion("87");
+									capability.setVersion("94");
 									capability.setPlatform(Platform.WINDOWS);
 									driver = new RemoteWebDriver(new URL(URL), capability);
                         }
